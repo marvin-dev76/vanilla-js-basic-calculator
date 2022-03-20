@@ -1,0 +1,150 @@
+.app {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  height: auto;
+  background-color: var(--bg-dark);
+  width: 100%;
+  border-radius: 12px;
+  /* box-shadow:  var(--custom-box-shadow); */
+  max-width: 289px;
+  font-size: 1.2rem;
+  flex-direction: column;
+}
+
+.screen {
+  width: 90%;
+  margin: 0 auto;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  color: var(--fg);
+  border-radius: 12px;
+}
+
+.prompt-div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  overflow-x: auto;
+}
+
+.result-div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 5px;
+  font-size: 1.5rem;
+  color: var(--green);
+  overflow-x: auto;
+}
+
+.line {
+  height: 5px;
+  background-color: var(--bg-dark);
+  width: 100%;
+}
+
+.buttons {
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  display: grid;
+  grid: repeat(4, 60px) / repeat(4, 60px);
+  gap: 10px;
+}
+
+.btn {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 1.2em;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.btn:active {
+  color: var(--fg);
+  background-color: var(--fg-dark);
+}
+
+#delete {
+  color: var(--yellow);
+}
+
+#delete:active {
+  color: var(--bg);
+  background-color: var(--yellow);
+}
+
+#clear {
+  color: var(--red);
+}
+
+#clear:active {
+  color: var(--bg);
+  background-color: var(--red);
+}
+
+.fun {
+  color: var(--blue);
+}
+
+.fun:active {
+  color: var(--bg);
+  background-color: var(--blue);
+}
+
+.equal {
+  width: 100%;
+  background-color: var(--bg);
+  font-size: 1.2em;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  color: var(--green);
+  grid-column: 1 / 4;
+}
+
+.equal:active {
+  color: var(--bg);
+  background-color: var(--green);
+}
+
+.dot {
+  font-size: 2.5rem;
+}
+
+.cursor {
+  width: 10px;
+  height: 24px;
+  background-color: var(--fg);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@media only screen and (max-width: 600px) {
+  .app {
+    transform: scale(1.1);
+  }
+}
